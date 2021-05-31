@@ -1,30 +1,27 @@
 import java.util.Scanner;
 
 public class Main {
-    private static String name;
-    private static String lastname;
-    private static String phone;
-    private static String address;
-    private static String email;
 
     public static void main(String[] args) {
+        Customer customer = new Customer();
         System.out.println("Registro de Usuario");
         Scanner scan = new Scanner(System.in);
         System.out.println("1. Ingrese su nombre: ");
-        name = scan.nextLine();
+        customer.setName(scan.nextLine());
         System.out.println("2. Ingrese su Apellido: ");
-        lastname = scan.nextLine();
+        customer.setLastname(scan.nextLine());
         System.out.println("3. Ingrese su telefono: ");
-        phone = scan.nextLine();
+        customer.setPhone(scan.nextLine());
         System.out.println("4. Ingrese su dirección ");
-        address = scan.nextLine();
+        customer.setAddress(scan.nextLine());
         System.out.println("5. Ingrese su email: ");
-        email = scan.nextLine();
-        System.out.println("Sus Datos son: Nombre: "+name+", Apellido: "+lastname+", telefono: "+phone+", Dirección: "+address+", correo electronico: "+email);
+        customer.setEmail(scan.nextLine());
+        System.out.println("Sus Datos son: Nombre: "+customer.getName()+", Apellido: "+customer.getLastname()+", telefono: "+
+                customer.getPhone()+", Dirección: "+customer.getAddress()+", correo electronico: "+customer.getEmail());
         System.out.println("Son correctos? Y or n");
         String answer = scan.nextLine();
         if(answer.equals("Y")) {
-            System.out.println("Usuario Registrado Exitosamente: " + name + " " + lastname);
+            System.out.println("Usuario Registrado Exitosamente: " + customer.getName() + " " + customer.getLastname());
         } else {
             System.out.println("Usuario no Registrado");
         }
