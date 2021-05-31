@@ -9,6 +9,7 @@ public class Main {
     private static String gender;
 
     public static void main(String[] args) {
+        // Este cambio no tiene sentido ya que el genero no es requerido para realizar la compra
         System.out.println("Registro de Usuario");
         Scanner scan = new Scanner(System.in);
         System.out.println("1. Ingrese su nombre: ");
@@ -23,7 +24,8 @@ public class Main {
         email = scan.nextLine();
         System.out.println("6. Ingrese su genero (F, M, O): ");
         gender = scan.nextLine();
-        System.out.println("Sus Datos son: Nombre: "+name+", Apellido: "+lastname+", telefono: "+phone+", Dirección: "+address+", correo electronico: "+email);
+        System.out.println("Sus Datos son: Nombre: "+name+", Apellido: "+lastname+", telefono: "+phone+", Dirección: "+address
+                +", correo electronico: "+email+" Genero: "+gender);
         System.out.println("Son correctos? Y or n");
         String answer = scan.nextLine();
         if(answer.equals("Y")) {
