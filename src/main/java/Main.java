@@ -6,6 +6,7 @@ public class Main {
     private static String phone;
     private static String address;
     private static String email;
+    private static String gender;
 
     public static void main(String[] args) {
         System.out.println("Registro de Usuario");
@@ -20,6 +21,8 @@ public class Main {
         address = scan.nextLine();
         System.out.println("5. Ingrese su email: ");
         email = scan.nextLine();
+        System.out.println("6. Ingrese su genero (F, M, O): ");
+        gender = scan.nextLine();
         System.out.println("Sus Datos son: Nombre: "+name+", Apellido: "+lastname+", telefono: "+phone+", Dirección: "+address+", correo electronico: "+email);
         System.out.println("Son correctos? Y or n");
         String answer = scan.nextLine();
